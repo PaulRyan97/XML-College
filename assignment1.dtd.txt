@@ -1,0 +1,71 @@
+<!ELEMENT database (towers,customers,sims,calls,towerUsages)>
+
+<!ELEMENT towers (tower+)>
+<!ELEMENT tower (towerID, degreesNorth,minutesNorth,secondsNorth,degreesWest,minutesWest,secondsWest,streetAddress,townName,countyName)>
+<!ELEMENT towerID ID #REQUIRED>
+<!ELEMENT degreesNorth (#PCDATA)>
+<!ELEMENT minutesNorth (#PCDATA)>
+<!ELEMENT secondsNorth (#PCDATA)>
+<!ELEMENT degreesWest (#PCDATA)>
+<!ELEMENT minutesWest (#PCDATA)>
+<!ELEMENT secondsWest (#PCDATA)>
+<!ELEMENT streetAddress (#PCDATA)>
+<!ELEMENT townName (#PCDATA)>
+<!ELEMENT countyName (#PCDATA)>
+
+<!ELEMENT customers (customer+)>
+<!ELEMENT customer (customerID,surname,firstname,streetAddress,townName,countyName,contractOrPrepaid,confirmedIdentity)>
+<!ELEMENT customerID ID #REQUIRED>
+<!ELEMENT surname (#PCDATA)>
+<!ELEMENT firstname (#PCDATA)>
+<!ELEMENT streetAddress (#PCDATA)>
+<!ELEMENT townName (#PCDATA)>
+<!ELEMENT countyName (#PCDATA)>
+<!ELEMENT contractOrPrepaid (#PCDATA)>
+<!ELEMENT confirmedIdentity (1|0) "0">
+
+<!ELEMENT sims (sim+)>
+<!ELEMENT sim (simID,areaCode,number,customerID,yearPurchased,monthPurchased,dayPurchased)>
+<!ELEMENT simID ID #REQUIRED>
+<!ELEMENT areacode (#PCDATA)>
+<!ELEMENT number (#PCDATA)>
+<!ELEMENT customerID ID #REQUIRED>
+<!ELEMENT yearPurchased (#PCDATA)>
+<!ELEMENT monthPurchased (#PCDATA)>
+<!ELEMENT dayPurchased (#PCDATA)>
+
+
+<!ELEMENT calls (call+)>
+<!ELEMENT call (callID,simID,madeOrReceived,countryCodeOfOtherParty,areaCodeOfOtherParty,numberCodeOfOtherParty,year,month,day,hour,minute,second)>
+<!ELEMENT callID ID #REQUIRED>
+<!ELEMENT simID ID #REQUIRED>
+<!ELEMENT madeOrReceived (#PCDATA)>
+<!ELEMENT countryCodeOfOtherParty (#PCDATA)>
+<!ELEMENT areaCodeOfOtherParty (#PCDATA)>
+<!ELEMENT numberCodeOfOtherParty (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT month (#PCDATA)>
+<!ELEMENT day (#PCDATA)>
+<!ELEMENT hour (#PCDATA)>
+<!ELEMENT minute (#PCDATA)>
+<!ELEMENT second (#PCDATA)>
+
+<!ELEMENT towerUsages (towerUsage+)>
+<!ELEMENT towerUsage (callID,towerID,durationOfUse)>
+<!ELEMENT callID ID #REQUIRED>
+<!ELEMENT towerID ID #REQUIRED>
+<!ELEMENT durationOfUse (#PCDATA)>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
